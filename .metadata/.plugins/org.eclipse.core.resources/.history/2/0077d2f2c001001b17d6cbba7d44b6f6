@@ -1,0 +1,16 @@
+package variaveis;
+
+import javax.swing.JOptionPane;
+
+public class ManipulaString {
+
+	public static void main(String[] args) {
+		//String eh do tipo Referencia - tem metodos
+		String email = JOptionPane.showInputDialog("Email");
+		System.out.println("Original: " + email);
+		System.out.println("Maiscula: " + email.toLowerCase());
+		System.out.println("Maiscula: " + email.toUpperCase());
+		
+	}
+
+}

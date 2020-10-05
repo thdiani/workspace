@@ -1,0 +1,20 @@
+package br.com.universidade.implementacao;
+
+import br.com.universidade.modelo.Aluno;
+
+public class TesteAluno {
+
+	public static void main(String[] args) {
+	
+		Aluno objeto = new Aluno();
+		objeto.preencherRm(1000000);
+		objeto.preencherNome("A");
+		objeto.preencherEmail("Email");
+		objeto.exibirRm();
+		objeto.exibirNome();
+		objeto.exibirEmail();
+
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.modelo.Cliente;
+import br.com.ecommerce.modelo.Endereco;
+import br.com.ecommerce.modelo.Produto;
+import br.com.ecommerce.modelo.Venda;
+
+public class TesteVenda {
+
+	public static void main(String[] args) {
+
+		Produto produto = new Produto();
+		Cliente cliente = new Cliente();
+		Venda venda = new Venda();
+		Endereco endereco = new Endereco();
+		
+		venda.setAll(
+				Integer.parseInt(JOptionPane.showInputDialog("Digite a NF")),
+				JOptionPane.showInputDialog("Digite a Data"),
+				Float.parseFloat(JOptionPane.showInputDialog("Digite o Total")),
+				produto,
+				cliente
+				);
+		venda.getAll();
+	}
+
+}

@@ -1,0 +1,56 @@
+package br.com.lojauati.modelo;
+
+public class Elevador {
+
+	private int qtdePessoas;
+	private int capacidadePessoas;
+	private int andarAtual;
+	private int maiorAndar;
+	private int menorAndar;
+	// <modificador> <tipo_retorno> <nome>(<tipo param> <nome param>)
+	//pode usar o mesmo <nome param> para diferentes metodos
+	public void preencherMaiorAndar(int pAndar) {
+		//validacao do maior andar
+		if (pAndar>menorAndar);
+		maiorAndar=pAndar;
+	}
+	public void preenhcerMenorAndar(int pAndar) {
+		if (pAndar<=maiorAndar);
+		menorAndar=pAndar;
+
+	}
+	public void preencherCapacidadePessoas(int pCapPessoas) {
+		capacidadePessoas=pCapPessoas;
+	}
+
+	public void subir() {
+		if (andarAtual<maiorAndar) {
+			andarAtual++;
+		}
+	}
+	public void descer() {
+		if (andarAtual<=menorAndar);{
+			andarAtual--;
+		}
+	}
+	public void entrar(int qtde) {
+		int total = qtdePessoas+qtde;
+		if (total<capacidadePessoas);	{
+			qtdePessoas+=qtde;
+		}
+	}
+	public void sair(int qtde) {
+		if (qtde<qtdePessoas); {
+			qtdePessoas-=qtde;
+		}
+	}
+	public String exibirTudo() {
+		return 
+				"Capacidade maxima.: " + capacidadePessoas + "\n" +
+				"Qtdade atual......: " + qtdePessoas + "\n" +
+				"Andar atual.......: " + andarAtual + "\n" +
+				"Maior andar.......: " + maiorAndar + "\n" +
+				"Menor andar.......: " + menorAndar;
+	}
+}
+

@@ -1,0 +1,27 @@
+package br.com.universidade.implementacao;
+
+import br.com.universidade.modelo.Curso;
+import br.com.universidade.modelo.Formacao;
+import br.com.universidade.modelo.Turma;
+import br.com.universidade.tela.Magica;
+
+public class ImplementacaoTurma {
+
+	public static void main(String[] args) {
+
+		char opcao = 0;
+		Formacao formacao=null;
+		Turma turma = new Turma(
+				Magica.s("Nome"),
+				Magica.s("Periodo"),
+
+				);
+		
+		Aluno aluno = new Aluno();
+		Professor professor = new Professor();
+		Curso curso = new Curso();
+		
+		turma.set
+	}
+
+}

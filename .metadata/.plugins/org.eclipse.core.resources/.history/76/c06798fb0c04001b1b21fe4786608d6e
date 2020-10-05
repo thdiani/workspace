@@ -1,0 +1,41 @@
+package br.com.universidade.modelo;
+/*
+ * Design Patterns (Melhores praticas para projetos com OO)
+ * 
+ */
+
+public class Aluno {
+	private int rm;
+	private String nome;
+	private String email;
+
+	public void preencherRm(int pRm) {
+		rm = pRm;
+	}
+	public void preencherNome(String pNome) {
+		nome = pNome;
+	}
+	public void preencherEmail(String pEmail) {
+		email = pEmail;
+	}
+	public int exibirRm() {
+		return rm;
+	}
+	public String exibirNome() {
+		return nome;
+	}
+	public String exibirEmail() {
+		return email;
+	}
+	public void preencherTudo(int pRm, String pNome, String pEmail) {
+		rm = pRm;
+		nome = pNome;
+		email = pEmail;
+	}
+	public String exibirTudo() {
+		return
+				"Nome....: " + nome + "\n" +
+				"Email...: " + email + "\n" +
+				"RM......: " + rm;
+	}
+}

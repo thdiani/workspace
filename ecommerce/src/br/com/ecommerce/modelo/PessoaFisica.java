@@ -1,0 +1,53 @@
+package br.com.ecommerce.modelo;
+
+//sub-classe
+public class PessoaFisica extends Cliente { //indicar heranca de Classe
+	private String cpf;
+	private String rg;
+	private String nascimento;
+	
+	public void setAll(int i, String n, Endereco e, String cpf, String rg, String nascimento) {
+		super.setAll(i, n, e); //forma de chamar a super classe - classe pai
+		this.cpf = cpf;
+		this.rg = rg;
+		this.nascimento = nascimento;
+	}
+	public String getAll() {
+		return //super para chamar a classe pai
+				super.getAll() +
+				"CPF: " + cpf + "\n" +
+				"RG: " + rg + "\n" +
+				"Nascimento: " + nascimento;
+	}
+	public PessoaFisica() {
+		super();
+	}
+	public PessoaFisica(int i, String n, Endereco e, String cpf, String rg, String nascimento) {
+		super(i, n, e); //forma de chamar a super classe - classe pai
+		this.cpf = cpf;
+		this.rg = rg;
+		this.nascimento = nascimento;
+	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getRg() {
+		return rg;
+	}
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+	public String getNascimento() {
+		return nascimento;
+	}
+	public void setNascimento(String nascimento) {
+		this.nascimento = nascimento;
+	}
+	
+	
+	
+}

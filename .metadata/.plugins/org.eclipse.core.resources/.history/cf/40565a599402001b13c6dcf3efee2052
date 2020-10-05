@@ -1,0 +1,15 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class ExemploRepeticao {
+
+	public static void main(String[] args) {
+		String email = JOptionPane.showInputDialog("Email").toLowerCase();
+		while (!email.contains("@")==true) {
+			email = JOptionPane.showInputDialog("Email Invalido").toLowerCase();
+		}
+		System.out.println(email);
+	}
+
+}

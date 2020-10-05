@@ -1,0 +1,46 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.modelo.Cliente;
+import br.com.ecommerce.modelo.Endereco;
+import br.com.ecommerce.modelo.Produto;
+import br.com.ecommerce.modelo.Venda;
+
+public class TesteVenda {
+
+	public static void main(String[] args) {
+
+		Produto produto = new Produto();
+		produto.setId(Integer.parseInt(JOptionPane.showInputDialog("Digite o ID Produto")));
+		produto.setDescricao(JOptionPane.showInputDialog("Digite a descricao").toUpperCase());
+		produto.setQtde(Integer.parseInt(JOptionPane.showInputDialog("Digite a Qtdade Produto")));
+		produto.setValorCompra(Float.parseFloat(JOptionPane.showInputDialog("Digite o Valor de Compra")));
+		produto.setValorVenda(Float.parseFloat(JOptionPane.showInputDialog("Digite o valor de Venda")));
+		
+		Cliente cliente = new Cliente();
+		cliente.setId(Integer.parseInt(JOptionPane.showInputDialog("Digite o ID Cliente")));
+		cliente.setNome(JOptionPane.showInputDialog("Digite o Nome do Cliente").toUpperCase());
+		cliente.setEndereco(null);
+		
+		Endereco endereco = new Endereco();
+		endereco.setLogradouro(JOptionPane.showInputDialog("Digite o Logradouro"));
+		endereco.setBairro(JOptionPane.showInputDialog("Digite o Bairro"));
+		endereco.setCidade(JOptionPane.showInputDialog("Digite o Cidade"));
+		endereco.setEstado(JOptionPane.showInputDialog("Digite o Estado"));
+		endereco.setCep(JOptionPane.showInputDialog("Digite o CEP"));
+		endereco.setNumero(JOptionPane.showInputDialog("Digite o Numero"));
+		endereco.setComplemento(JOptionPane.showInputDialog("Digite o Complemento"));
+		
+		Venda venda = new Venda();
+		venda.setAll(
+				Integer.parseInt(JOptionPane.showInputDialog("Digite a NF")),
+				JOptionPane.showInputDialog("Digite a Data"),
+				Float.parseFloat(JOptionPane.showInputDialog("Digite o Total")),
+				produto,
+				cliente
+				);
+		System.out.println(venda.getAll());
+	}
+
+}

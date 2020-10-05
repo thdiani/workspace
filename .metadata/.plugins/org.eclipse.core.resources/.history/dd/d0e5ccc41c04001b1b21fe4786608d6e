@@ -1,0 +1,27 @@
+package br.com.universidade.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.universidade.modelo.Aluno;
+
+public class TesteAluno {
+
+	public static void main(String[] args) {
+	
+		Aluno objeto = new Aluno();
+		//objeto.setRm(1000000);
+		//objeto.setNome("A");
+		//objeto.setEmail("Email");
+		objeto.setAll(
+				Integer.parseInt(JOptionPane.showInputDialog("Digite o RM")),
+				JOptionPane.showInputDialog("Digite o Nome").toUpperCase(),
+				JOptionPane.showInputDialog("Digite o Email").toLowerCase()
+				);
+		//System.out.println(objeto.getRm());
+		//System.out.println(objeto.getNome());
+		//System.out.println(objeto.getEmail());
+		System.out.println(objeto.getAll());
+
+	}
+
+}

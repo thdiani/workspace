@@ -1,0 +1,16 @@
+package br.com.lojauati.teste;
+
+import br.com.lojauati.modelo.Formula1;
+
+public class TesteFormula1 {
+
+	public static void main(String[] args) {
+		//Formula1 objeto; //criando objeto
+		//objeto.preencherEscuderia("Ferrari"); - NAO FUNCIONA pq o objeto tem q ser instanciado
+		
+		Formula1 carro = new Formula1(); //instanciando objeto
+		carro.preencherEscuderia("ferrari");
+		
+	}
+
+}

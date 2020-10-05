@@ -1,0 +1,59 @@
+package br.com.ecommerce.implementacao;
+
+import br.com.ecommerce.modelo.Cliente;
+import br.com.ecommerce.modelo.Endereco;
+import br.com.ecommerce.modelo.PessoaFisica;
+import br.com.ecommerce.modelo.PessoaJuridica;
+import br.com.ecommerce.tela.Magica;
+
+public class ImplementarCliente {
+
+	public static void main(String[] args) {
+
+		char opcao = Magica.s("Digite 1 para PJ ou 2 para PF").charAt(0);
+		Cliente cliente = null;
+		do {
+			if (opcao=='1') {
+				cliente = new PessoaJuridica(
+						Magica.i("ID"),
+						Magica.s("Nome"),
+						new Endereco(
+								Magica.s("Digite o Logradouro"),
+								Magica.s("Digite o Bairro"),
+								Magica.s("Digite o Cidade"),
+								Magica.s("Digite o Estado"),
+								Magica.s("Digite o CEP"),
+								Magica.s("Digite o Numero"),
+								Magica.s("Digite o Complemento")
+								),
+						Magica.s("CNPJ"),
+						Magica.s("IE"),
+						Magica.s("Contato")
+						);
+			}else if (opcao=='2') {
+				cliente = new PessoaFisica(
+						Magica.i("ID"),
+						Magica.s("Nome"),
+						new Endereco(
+								Magica.s("Digite o Logradouro"),
+								Magica.s("Digite o Bairro"),
+								Magica.s("Digite o Cidade"),
+								Magica.s("Digite o Estado"),
+								Magica.s("Digite o CEP"),
+								Magica.s("Digite o Numero"),
+								Magica.s("Digite o Complemento")
+								),
+						Magica.s("CPF"),
+						Magica.s("RG"),
+						Magica.s("Nascimento")
+						);
+			}
+
+		}while (opcao!=1 && opcao!=2); {
+			System.out.println("Non ecziste");
+		}
+
+		System.out.println(cliente.getAll());
+	}
+
+}

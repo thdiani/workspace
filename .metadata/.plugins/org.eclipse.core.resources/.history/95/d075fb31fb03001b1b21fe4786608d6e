@@ -1,0 +1,56 @@
+package br.com.lojauati.modelo;
+
+public class Televisao {
+	private int canal;
+	private boolean status;
+	private int volume;
+
+
+	public void preencherVolume(int pVolume) {
+		if (volume>=0)
+			volume = pVolume;
+	}
+	public void preencherCanal(int pCanal) {
+		if (canal>=0)
+			canal = pCanal;
+	}
+	public void preencherStatus(boolean pStatus) {
+			status = pStatus;
+	}
+	public void aumentaVolume() {
+		if(volume>=0 && volume<50) {
+			volume++;		
+		}
+	}
+	public void diminuiVolume() {
+		if(volume<=50 && volume>0) {
+			volume--;
+		}
+	}
+	public void ligarTv() {
+		if(status==true) {
+			status=true;
+		}
+	}
+	public void desligarTv() {
+		if(status==false) {
+			status=false;
+		}
+	}
+	public void mudarCanal(int pCanal) {
+		canal=pCanal;
+		if (canal>0) {
+			canal=pCanal;
+		}
+	}
+	public boolean exibirStatus() {
+		return
+				"Tv ligada? " + status != null;
+	}
+	public String exibirTudo() {
+		return
+				"Canal Atual.......: " + canal + "\n" +
+				"Volume Atual......: " + volume;
+	}
+}
+

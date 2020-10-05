@@ -1,0 +1,40 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class ExemploDo {
+		/*
+		 * Jogador 1: vai digitar um numero inteiro
+		 * Jogador 2: tem que descobrir esse numero
+		 * Exibir o Parabens para o jogador2 quando ele descobrir
+		 * Atualizacoes
+		 * - o jogador2 ira receber dicas enquanto ele nao acertar
+		 * - no final tem que exibir qtas tentativas foras utilizadas pelo Jogador2
+		 */
+	public static void main(String[] args) {
+		char resposta=0;
+		int count=0;
+		do {
+		int valor1 = Integer.parseInt(JOptionPane.showInputDialog("Jogador 1 digite seu numero"));
+		int valor2 = Integer.parseInt(JOptionPane.showInputDialog("Jogador 2 tente advinhar"));
+		//n tem parse para char
+		//charAt para pegar o caracter no showInputDialog - ex. abaixo o primeiro caracter (0)
+		char opcao = JOptionPane.showInputDialog("Digite o operador matematico arimtimetico").charAt(0);
+		if (valor1==valor2) {
+			System.out.println("Parabens voce acertou");
+		if (valor1==(valor2-2)) {
+			System.out.println("Numero proximo...: " + (valor2-3));
+		}else if (valor1==(valor2+2)) {
+			System.out.println("Numero proximo...: " + (valor2+4));
+		}else {
+			System.out.println("Quase la tente outra vez!");
+		}
+		//toUpperCase tem q ser antes por conta da conversao do charAtwhile();
+		
+		resposta = JOptionPane.showInputDialog("Deseja Continuar <S> para continuar").toUpperCase().charAt(0);
+		}while(resposta=='S');
+		
+	}
+}
+
+

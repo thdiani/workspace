@@ -1,0 +1,29 @@
+package decisao;
+
+public class DecisaoSimples {
+
+	/*
+	 * Identificadores = nomes (classe, variavel...)
+	 * 
+	 * Regras:
+	 * 1 - Nao comeca com numero ....1berto (errado) h1berto (certo)
+	 * 2 - Nao usa caracteres especiais (@, #, ...) Excecao underline (_)
+	 * 
+	 * Padroes:
+	 * - nomes significativos
+	 * - sempre comecam com letras minisculas (a unica coisa que comeca com letra Maiscula eh classe)
+	 * - utilizar padrao Camel Case:
+	 * 					  String nomeDoCliente; (com letra Maiscula - excecao da primeira)
+	 * 					  String nomeDoClientePessoaFisica;
+	 *                    String nome_do_cliente_pessoa_fisica; (padrao python, linux)
+	 * 
+	 */
+	
+	public static void main(String[] args) {
+
+		
+		
+		
+	}
+
+}

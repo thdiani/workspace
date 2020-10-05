@@ -1,0 +1,58 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class DecisaoEncadeada {
+
+	/*
+	 * Identificadores = nomes (classe, variavel...)
+	 * 
+	 * Regras:
+	 * 1 - Nao comeca com numero ....1berto (errado) h1berto (certo)
+	 * 2 - Nao usa caracteres especiais (@, #, ...) Excecao underline (_)
+	 * 
+	 * Padroes:
+	 * - nomes significativos
+	 * - sempre comecam com letras minisculas (a unica coisa que comeca com letra Maiscula eh classe)
+	 * - utilizar padrao Camel Case:
+	 * 					  String nomeDoCliente; (com letra Maiscula - excecao da primeira)
+	 * 					  String nomeDoClientePessoaFisica;
+	 *                    String nome_do_cliente_pessoa_fisica; (padrao python, linux)
+	 * 
+	 * 
+	 * and => &&
+	 * or => ||
+	 */
+	
+	public static void main(String[] args) {
+		String nome = JOptionPane.showInputDialog("Nome do Aluno:").toUpperCase();
+		float nota1 = Float.parseFloat(JOptionPane.showInputDialog("Digite a Nota 1:"));
+		float nota2 = Float.parseFloat(JOptionPane.showInputDialog("Digite a Nota 2:"));
+		float media = (nota1 + nota2) / 2;
+		short faltas = Short.parseShort(JOptionPane.showInputDialog("Total de Faltas:"));
+		
+		
+		
+		System.out.println("Aluno " + nome + " sua media foi: " + media);
+		// Decisao Simples soh avalia o true - avalia cada condicao de If mesmo ja dando match - mais processamento
+		// Decisao Composta avalia o false - no primeiro true ja para de processar nos demais
+		if (media>=6 && faltas<20) {
+			System.out.println("Parabens:" + nome + " vc foi aprovado");
+		}else if (media<4 || faltas>=20) {
+			System.out.println("Reprovado");
+		}else  {
+			System.out.println("voce ainda tem chance");
+		}
+		
+
+
+			
+
+
+	
+		
+		
+		
+	}
+
+}
